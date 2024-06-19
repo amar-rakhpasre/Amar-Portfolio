@@ -1,0 +1,1175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --bg-color: #111111;
+    --second-bg-color: #151515;
+    --text-color: white;
+    --main-color: #04fffb;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+#logo69{
+    border-radius: 50px;
+}
+
+/*>>>>>>>>>>>>>>>>> Start Home section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 9%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.navbar a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 10rem;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.logo span {
+    color: var(--main-color);
+    text-shadow: 0 0 50px var(--main-color);
+}
+
+.home-content h3 {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 3.5rem;
+}
+
+.home-content h1 {
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+
+.home-img {
+    border-radius: 50%;
+}
+
+.home-img img {
+    position: relative;
+    top: 3rem;
+    width: 22vw;
+    object-fit: cover;
+    height: 22vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.home-img img:hover {
+    box-shadow: 0 0 50px var(--main-color), 0 0 100px var(--main-color);
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    max-width: 1000px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: white;
+    transform: scale(1.3) translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: white;
+    border: 2px solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.text-animation {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 200px;
+}
+
+.text-animation span {
+    position: relative;
+}
+
+.text-animation span::before {
+    content: 'Web Developer';
+    color: var(--main-color);
+    animation: words 20s infinite;
+}
+
+.text-animation span::after {
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid var(--main-color);
+    }
+}
+
+@keyframes words {
+    0%,
+    20% {
+        content: 'Web Developer';
+    }
+    21%,
+    40% {
+        content: "Software Tester";
+    }
+    41%,
+    60% {
+        content: "Graphic Designer";
+    }
+    61%,
+    80% {
+        content: "Android Developer";
+    }
+    81%,
+    100% {
+        content: "Devops Engineer";
+    }
+}
+
+@keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+        width: calc(100% + 8px);
+    }
+}
+
+/*>>>>>>>>>>>>>>>>> End Home section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+/*>>>>>>>>>>>>>>>>> Start About section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background: var(--second-bg-color);
+    color: white;
+}
+.about h2 span{
+    color: var(--main-color);
+    text-shadow: 0 0 50px var(--main-color);
+}
+.about-img{
+    border-radius: 50%;
+}
+.about-img img{
+    position: relative;
+    width: 32vw;
+    object-fit: cover;
+    height: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    top: 1rem;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.about-img img:hover{
+    box-shadow: 0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
+}
+.heading{
+    text-align: center;
+    font-size: 8rem;
+}
+.about-content h2{
+    text-align: left;
+    line-height: 1.5;
+}
+.about-content h3{
+    font-size: 2.6rem;
+}
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+    color: var(--text-color);
+    font-weight: 600;
+    line-height: 30px;
+
+}
+.about-content p span{
+    color: var(--main-color);
+    text-shadow: 0 0 1px var(--main-color);
+}
+.about-content .text-animation span::before{
+    content: 'Web Developer';
+    color: var(--main-color);
+    animation: words 20s infinite;
+}
+.about-content .text-animation span::after{
+    content: "";
+    background-color: var(--second-bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--second-bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+/* ::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+}
+::-webkit-scrollbar-track{
+    background-color: var(--bg-color);
+    width: 10px;
+} */
+
+/*>>>>>>>>>>>>>>>>> End About section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+/*>>>>>>>>>>>>>>>>> Start Skills section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.custom-hr {
+    border: none;
+    border-top: 1px solid var(--main-color);
+    margin: 0px 0px;
+}
+.skills{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(30, 28, 31, 0.841);
+}
+
+.skills i {    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.5rem;
+    height: 6.5rem;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease-in-out;
+}
+.skills i:hover {
+    color: white;
+    transform: scale(1.3) translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
+}
+
+
+/*>>>>>>>>>>>>>>>>> End Skills section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+/*>>>>>>>>>>>>>>>>> Start Services section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+.services h2 {
+    margin-bottom: 5rem;
+}
+.services-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.services h2 span{
+    color: var(--main-color);
+    text-shadow: 0 0 50px var(--main-color);
+}
+.services-box span{
+    color: var(--main-color);
+    text-shadow: 0 0 50px var(--main-color);
+}
+.services-container .services-box{
+    flex: 1 1 30rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    
+    text-align: center;
+    border: 3px solid var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+    border-radius: 4rem;
+    transition: 0;
+    transition: 0.4s ease-in-out;
+}
+.services-container .services-box:hover{
+    box-shadow: 0 0 10px var(--main-color),
+    0 0 30px var(--main-color);
+    transform: scale(1.02);
+}
+.services-container .services-box a:hover{
+    color: #111111;
+}
+.services-box i{
+    font-size: 7rem;
+    color: var(--main-color);
+}
+.services-box h3{
+    font-size: 2.6rem;
+}
+.services-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+
+
+/*>>>>>>>>>>>>>>>>> End Services section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+/*>>>>>>>>>>>>>>>>> Start Education section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.education .heading{
+    font-size: 8rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+.education{
+    padding: 100px 15px;
+    background: var(--second-bg-color);
+}
+.education h2{
+    margin-bottom: 5rem;
+}
+.education h2 span{
+    color: var(--main-color);
+    text-shadow: 0 0 50px var(--main-color);
+}
+.timeline-items{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.timeline-items::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: var(--main-color);
+    left: calc(50% - 0px);
+}
+.timeline-item{
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+.timeline-item:last-child{
+    margin-bottom: 0;
+}
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+.timeline-content{
+    text-align: left;
+}
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+.timeline-dot{
+    height: 21px;
+    width: 21px;
+    background-color: var(--main-color);
+    box-sizing: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color);
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;            
+}
+.timeline-date{
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    margin: 6px 0 15px;
+}
+.timeline-content{
+    background-color: var(--bg-color);
+    border: 3px solid var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+    border-radius: 4rem;
+    padding: 30px 50px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.timeline-content:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+}
+.timeline-content h3{
+    font-size: 20px;
+    color: white;
+    margin: 0 0 10px;
+    font-weight: 500;
+}
+.timeline-content p{
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+::-webkit-scrollbar-track{
+    background-color: var(--bg-color);
+    width: 50px;
+}
+
+
+/*>>>>>>>>>>>>>>>>> End Education section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+/*>>>>>>>>>>>>>>>>> Start Experience section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+.experience .heading{
+    font-size: 8rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+.experience h2 span{
+    color: var(--main-color);
+    text-shadow: 0 0 50px var(--main-color);
+}
+.experience .experience-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+.experience-row .experience-column{
+    flex: 1 1 40rem;
+}
+.experience-column .experience-box{
+    border-left: 0.2rem solid var(--main-color);
+}
+.experience-box .experience-content{
+    position: relative;
+    padding-left: 2rem;
+}
+.experience-box .experience-content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--main-color);
+    border-radius: 50%;
+}
+.experience-content .content{
+    position: relative;
+    padding: 1.5rem;
+    border: 3px solid var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+    border-radius: 4rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+.experience-content .content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(0, 60, 129);
+    z-index: -1;
+    border-radius: 4rem;
+    transition: 0.5s;
+}
+.experience-content .content:hover::before{
+    width: 100%;
+}
+.experience-content .content .year{
+    font-size: 1.5rem;
+    color: var(--main-color);
+    padding-bottom: 0.5rem;
+}
+.experience-content .content h3{
+    font-size: 3rem;
+}
+.experience-content .content p{
+    font-size: 1.6rem;
+    padding-top: 0.5rem;
+}
+.experience-column .title{
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 20rem;
+}
+.experience-column .title span{
+    color: var(--main-color);
+    text-shadow: 0 0 50px var(--main-color);
+}
+
+/*>>>>>>>>>>>>>>>>> End Experience section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+/*>>>>>>>>>>>>>>>>> Start Projects section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.projects{
+    background: var(--second-bg-color);
+}
+.project-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    align-items: center;
+    gap: 2.3rem;
+    margin-top: 4.2rem;
+}
+.projects .heading{
+    font-size: 5rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+.projects h2 span{
+    color: var(--main-color);
+    text-shadow: 0 0 50px var(--main-color);
+}
+.row img{
+    height: 250px;
+    width: 100%;
+    border-radius: 28px;
+    margin-bottom: 1.4rem;
+    object-fit: cover;
+}
+.row{
+    background: #2d343f;
+    border-radius: 28px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 5px var(--main-color);
+    padding: 20px;
+    transition: all 0.50s ease;
+    cursor: pointer;
+}
+.main-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+.row h5{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.row i{   
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease-in-out;
+
+}
+.row i:hover{
+    color: white;
+    transform: scale(1.3)translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
+}
+.row h4{
+    font-size: medium;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+.row:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+/*>>>>>>>>>>>>>>>>> End Projects section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+/*>>>>>>>>>>>>>>>>> Start Contact section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.contact{
+    background-color: var(--bg-color);
+}
+.contact h2{
+    margin-bottom: 3rem;
+    color: white;
+}
+.contact h2 span{
+    color: var(--main-color);
+    text-shadow: 0 0 50px var(--main-color);
+}
+.contact form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 5rem auto;
+    text-align: center;
+}
+.contact form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 2.5rem;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: 2rem;
+    border: 2px solid var(--main-color);
+    margin: 1.5rem 0 ;
+    resize: none;
+}
+.contact form .btn{
+    margin-top: 2rem;
+}
+
+
+
+/*>>>>>>>>>>>>>>>>> End Contact section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+/*>>>>>>>>>>>>>>>>> Start Footer section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: var(--second-bg-color);
+}
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: var(--main-color);
+}
+.footer .social a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease-in-out;
+}
+.footer .social a:hover{
+    /* transform: scale(1.2)translateY(-10px);
+    background-color: var(--main-color);
+    color: black;
+    box-shadow: 0 0 25px var(--main-color); */
+
+    color: white;
+    transform: scale(1.3)translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
+}
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul li a{
+    color: white;
+    transition: 0.1s ease-in-out;
+}
+.footer ul li a:hover{
+    border-bottom:  3px solid var(--main-color);
+}
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+.footer .copyright{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+/*>>>>>>>>>>>>>>>>> End Footer section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+
+
+
+
+/*>>>>>>>>>>>>>>>>> Responsive section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+@media(max-width:1285){
+    html{
+        font-size: 55%;
+    }
+    .services-container{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2,1fr);
+        margin: 0.5rem;
+    }
+}
+@media(max-width:991px){
+    header{
+        padding: 2rem 3%;
+    }
+    
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+
+    .timeline-item::before{
+        left: 7px;
+    }
+    .timeline-item:nth-child(odd){
+        padding: 0;
+        text-align: left;
+    }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even){
+        padding-left: 37px;
+    }
+    .timeline-dot{
+        left: 0;
+    }
+    .skills i{
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    .services{
+        padding-bottom: 7rem;
+    }
+
+    .contact form{
+        flex-direction: column;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+    
+}
+@media(max-width:895px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 2rem; 
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: white;
+    }
+    .home{
+        flex-direction: column;
+        margin: 2rem 1rem;
+    }
+    .home-content h1{
+        font-size: 5rem;
+        margin-top: 1rem;
+    }
+    .home-content p{
+        max-width: 600px;
+        font-size: 1.5rem;
+        margin: 0 auto;
+    }
+    .home-img img{
+        width: 46vw;
+        height: 46vw;
+        margin-top: -5rem;
+    }
+    .social-icons {
+        margin-top: -1rem;
+    }
+    .btn{
+        margin: -1rem;
+    }
+    .skills i{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+
+    .about{
+        flex-direction: column-reverse;
+    }
+    .about-content{
+        margin: 0 2rem 4rem;
+    }
+    .about img{
+        width: 52vw;
+        height: 52vw;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+    .about-content .heading{
+        margin-top: -10rem;
+    }
+    .about-conten p{
+        line-height: 0px;
+    }
+
+
+    .services{
+        margin: 50px;
+    }
+    .services h3 {
+        margin-bottom: 3rem;
+    }
+    .services-container{
+        grid-template-columns: repeat(1,1fr);
+        gap: 40px;
+    }
+
+    .timeline-items{
+        margin: 30px;
+        text-align: justify;
+    }
+
+    .experience-row{
+        margin: 50px;
+    }
+
+   .project-content{
+    margin: 50px;
+   }
+
+   .content .form{
+    margin: 50px;
+   }
+
+
+   .experience-row .title{
+    margin: 25px;
+    padding-left: 50px;
+   }
+
+}
+@media(max-width:398px){
+      #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 2rem; 
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: white;
+    }
+    .home{
+        flex-direction: column;
+        margin: 2rem 1rem;
+        
+    }
+    .home-content h1{
+        font-size: 5rem;
+        margin-top: 1rem;
+    }
+    .home-content p{
+        max-width: 600px;
+        font-size: 1.5rem;
+        margin: 0 auto;
+    }
+    .home-img img{
+        width: 46vw;
+        height: 46vw;
+        margin-top: -5rem;
+    }
+    .social-icons {
+        margin-top: -1rem;
+    }
+    .btn{
+        margin: -1rem;
+    }
+    .skills i{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+
+    .about{
+        flex-direction: column-reverse;
+    }
+    .about-content{
+        margin: 0 2rem 4rem;
+    }
+    .about img{
+        width: 52vw;
+        height: 52vw;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+    .about-content .heading{
+        margin-top: -10rem;
+    }
+    .about-conten p{
+        line-height: 0px;
+    }
+
+
+    .services{
+        margin: 50px;
+    }
+    .services h3 {
+        margin-bottom: 3rem;
+    }
+    .services-container{
+        grid-template-columns: repeat(1,1fr);
+        gap: 40px;
+    }
+
+    .timeline-items{
+        margin: 30px;
+        text-align: justify;
+    }
+
+    .experience-row{
+        margin: 50px;
+    }
+
+   .project-content{
+    margin: 50px;
+   }
+
+   .content .form{
+    margin: 50px;
+   }
+
+
+   .experience-row .title{
+    margin: 25px;
+    padding-left: 50px;
+   }
+
+}
+
+@media(max-width:320px){
+    html{
+        font-size: 55%;
+        display: flex;
+    }
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 2rem; 
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: white;
+    }
+    .home{
+        display: flex;
+        width: 100%;
+    }
+    .list{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+    }
+    .list li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: smaller;
+    }
+    .project-content .row-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+}
