@@ -654,6 +654,11 @@ section {
     gap: 2.3rem;
     margin-top: 4.2rem;
 }
+.project-content .row-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .projects .heading{
     font-size: 5rem;
     text-align: center;
@@ -678,6 +683,7 @@ section {
     padding: 20px;
     transition: all 0.50s ease;
     cursor: pointer;
+    
 }
 .main-row{
     display: flex;
