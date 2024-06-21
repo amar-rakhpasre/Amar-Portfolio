@@ -599,7 +599,7 @@ section {
     position: relative;
     padding: 1.5rem;
     border: 3px solid var(--main-color);
-    box-shadow: 0 0 10px var(--main-color);
+    box-shadow: 0 0 1px var(--main-color);
     border-radius: 4rem;
     margin-bottom: 2rem;
     overflow: hidden;
@@ -843,13 +843,40 @@ section {
 /*>>>>>>>>>>>>>>>>> Responsive section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
 @media (max-width:1285px) {
+    header{
+        font-size: 55%;
+    }
     html{
         font-size: 55%;
     }
 
-    .services-container{
+    /* .services-container{
         padding-bottom: 7rem;
         grid-template-columns: repeat(2,1fr);
+    } */
+    .home-content{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .about-content{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .services-container{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .timeline-items{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .experience-row{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .project-content{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(1,1fr);
     }
 }
 
@@ -898,6 +925,7 @@ section {
 @media (max-width:895px){
     #menu-icon{
         display: block;
+        margin-right: 3rem;
     }
     .navbar{
         position: absolute;
@@ -972,6 +1000,9 @@ section {
 }
 
 @media (max-width:520px){
+    header {
+        width: 520px;
+    }
     html{
         font-size: 50%;
     }
@@ -1003,6 +1034,9 @@ section {
     .contact form .input-box{
         width: 100%;
     }
+    .header {
+        width: 462px;
+    }
     .footer{
         flex-direction: column-reverse;
     }
@@ -1012,8 +1046,14 @@ section {
 }
 
 @media (max-width:371px){
+    .header {
+        width: 371px;
+    }
     .home{
         justify-content: center;
+    }
+    header{
+        padding: 2rem 3%;
     }
     .home-content{
         display: flex;
