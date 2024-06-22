@@ -8,28 +8,48 @@ document.addEventListener('DOMContentLoaded', () => {
         menuIcon.classList.toggle('bx-x');
         navbar.classList.toggle('active');
     };
+    // Close menu if clicked outside of it
+    document.addEventListener('click', function(event) {
+    let isClickInsideMenu = navbar.contains(event.target);
+    let isClickOnMenuIcon = menuIcon.contains(event.target);
 
-    window.addEventListener('scroll', () => {
-        let top = window.scrollY;
-
-        sections.forEach(sec => {
-            let offset = sec.offsetTop - 150;
-            let height = sec.offsetHeight;
-            let id = sec.getAttribute('id');
-            
-            if (top >= offset && top < offset + height) {
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    document.querySelector(`header nav a[href*=${id}]`).classList.add('active');
-                });
-            }
-        });
-    });
-
-    // New code to redirect to home section after refresh
-    if (!window.location.hash) {
-        window.location.hash = '#home';
+    if (!isClickInsideMenu && !isClickOnMenuIcon) {
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
     }
+});
+
+
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 250;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+        
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            });
+        }
+    });
+};
+
+// New code to redirect to home section after refresh
+window.addEventListener('load', () => {
+    if (!window.location.hash) {
+        const homeSection = document.querySelector('.home');
+        if (homeSection) {
+            homeSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    } else {
+        const targetSection = document.querySelector(window.location.hash);
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+});
 
     const form = document.getElementById('contactForm');
     const formMessage = document.getElementById('formMessage');
@@ -64,22 +84,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     const headerLinks = document.querySelectorAll('.navbar a');
-
-//     headerLinks.forEach(link => {
-//         link.addEventListener('click', function(e) {
-//             e.preventDefault();
-
-//             const targetId = this.getAttribute('href').substring(1); // Get target section ID
-//             const targetSection = document.getElementById(targetId); // Find the target section
-
-//             if (targetSection) {
-//                 targetSection.scrollIntoView({
-//                     behavior: 'smooth', // Scroll behavior: smooth
-//                     block: 'start' // Align the top of the target element with the top of the viewport
-//                 });
-//             }
-//         });
-//     });
-// });
+// New code to enable smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+ 
